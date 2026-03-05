@@ -48,6 +48,7 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
               // banner with image
               Container(
@@ -68,9 +69,16 @@ class _HomePageState extends State<HomePage> {
                 padding: EdgeInsets.all(45.0),
                 child: Column(
                   children: [
-                    Text(
-                      "Located in the heart of Sampaloc, Manila near UST, we blend studying and coffee️ to inspire your creativity. Join us for a unique experience that goes beyond the ordinary.",
-                      textAlign: TextAlign.justify,
+                    Row(
+                      children: [
+                        Expanded(
+                          child: 
+                          Text(
+                            "Located in the heart of Sampaloc, Manila near UST, we blend studying and coffee️ to inspire your creativity. Join us for a unique experience that goes beyond the ordinary.",
+                            textAlign: TextAlign.justify,
+                          ),
+                        ),
+                      ],
                     ),
 
                     SizedBox(height: 16.0),
@@ -91,11 +99,17 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     Row(
                       children: [
+
                         //img go here
-                        Text(
-                          "Here at Komplex Cafe, you can focus on your work while enjoying freshly brewed coffee. We also offer fruit tea, pasta, and pastries.",
-                          textAlign: TextAlign.right,
+
+                        Expanded(
+                          child: 
+                            Text(
+                              "Here at Komplex Cafe, you can focus on your work while enjoying freshly brewed coffee. We also offer fruit tea, pasta, and pastries.",
+                              textAlign: TextAlign.right,
+                            ),
                         )
+
                       ],
                     )
                   ],
@@ -133,6 +147,57 @@ class _HomePageState extends State<HomePage> {
                 )
               ),
 
+              // img with text  
+              Container(
+                padding: EdgeInsets.all(45.0),
+                child: Row(
+                  children: [
+                    Column(
+                      children: [
+                        Text(
+                          "Interested in booking Komplex Cafe for an event? Come send us a message!"
+                        ),
+
+                        ElevatedButton(
+                          onPressed: null,
+                          child: 
+                            Text("Contact Us", style: TextStyle(fontWeight: FontWeight.bold),),
+                        ),
+                      ],
+                    ),
+
+                    Text(
+                      "image go here"
+                    )
+                  ],
+                )
+              ),
+
+              // img with text  
+              Container(
+                padding: EdgeInsets.all(45.0),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          "Visit us at:",
+                          textAlign: TextAlign.center,
+                        ),
+                        Row(
+                          children: [
+                            //icon go here
+                            Text(
+                              "1045 Padre Noval St, Sampaloc, Manila, 1008 Metro Manila",
+                              style: TextStyle(fontWeight: FontWeight.bold)
+                            )
+                          ],
+                        )
+                      ],
+                    )
+                  ],
+                )
+              ),
 
           ],
         ),
