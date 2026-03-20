@@ -136,7 +136,7 @@ const HomePage = () => {
           that goes beyond the ordinary.
         </p>
         <div className="intro_cta-wrap">
-          <button className="btn--orange">Browse Menu</button>
+          <button className="btn--orange" onClick={() => handleNav("/menu")}>Browse Menu</button>
         </div>
       </section>
 
@@ -180,7 +180,7 @@ const HomePage = () => {
             Interested in booking Komplex Cafe for an event? Come send us a
             message!
           </p>
-          <button className="btn--white">Contact Us</button>
+          <button className="btn--white" onClick={() => handleNav("/contact")}>Contact Us</button>
         </div>
         <div className="booking_img-wrap">
           <img
