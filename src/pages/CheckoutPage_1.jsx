@@ -51,18 +51,18 @@ export default function CheckoutPage_1() {
             <NavBar />
 
             {/* ── Hero banner ── */}
-            <div className="menu-hero">
-            <h1 className="menu-hero-title">Checkout</h1>
+            <div className="checkout-hero">
+            <h1 className="checkout-hero-title">Checkout</h1>
             </div>
 
             {/* ── Cart items ── */}
 
             {/* ── Sticky footer ── */}
-            <div className="menu-footer">
-                <span className="menu-footer-total">
+            <div className="checkout-footer">
+                <span className="checkout-footer-total">
                 Total: <strong>{peso(cartTotal)}</strong>
                 </span>
-                <div className="menu-footer-buttons">
+                <div className="checkout-footer-buttons">
                 <button className="btn-back" onClick={() => navigate("/menu")}>Back</button>
                 <button className="btn-continue" disabled={cart.length === 0}>Continue</button>
                 </div>
