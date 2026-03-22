@@ -1,5 +1,5 @@
 import { useState, useRef } from "react";
-// import "../css/CheckoutPage.css";
+import "../css/CheckoutPage.css";
 import { useLocation, useNavigate } from "react-router-dom";
 import NavBar from "../components/NavBar";
 
@@ -59,12 +59,12 @@ export default function CheckoutPage_1() {
 
             {/* ── Sticky footer ── */}
             <div className="checkout-footer">
-                <span className="checkout-footer-total">
-                Total: <strong>{peso(cartTotal)}</strong>
-                </span>
+                <div className="checkout-footer-total">
+                    Total: <strong>{peso(cartTotal)}</strong>
+                </div>
                 <div className="checkout-footer-buttons">
-                <button className="btn-back" onClick={() => navigate("/menu")}>Back</button>
-                <button className="btn-continue" disabled={cart.length === 0}>Continue</button>
+                    <button className="btn-back" onClick={() => navigate("/menu")}>Back</button>
+                    <button className="btn-continue" disabled={cart.length === 0}>Continue</button>
                 </div>
             </div>
         </div>

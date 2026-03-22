@@ -1,0 +1,99 @@
+/* ══════════════════════════════════════════════════════════════
+   CheckoutPage.css — Komplex Cafe
+══════════════════════════════════════════════════════════════ */
+
+/* ─── Page shell ────────────────────────────────────────────── */
+.checkout-page {
+    font-family: 'Golos', sans-serif;
+    background: #f5f5f5;
+    min-height: 100dvh;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    padding-top: 62px;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 80px;
+}
+
+/* ─── Hero banner ───────────────────────────────────────────── */
+.checkout-hero {
+    font-family: 'gliker', sans-serif;
+    background: #e07820;
+    padding: 10px 24px 10px;
+}
+
+.checkout-hero-title {
+    font-size: 3em;
+    color: #fff;
+    letter-spacing: -0.5px;
+}
+
+/* ─── Sticky footer ─────────────────────────────────────────── */
+.checkout-footer {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    max-width: 480px;
+    background: #fff;
+    border-top: 1px solid #e5e5e5;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, .07);
+}
+
+.checkout-footer-total {
+    display: block;
+    background-color: #e07820;
+    font-size: 15px;
+    color: #fff;
+    padding: 15px 20px;
+}
+
+.checkout-footer-total strong {
+    font-weight: 700;
+}
+
+.checkout-footer-buttons {
+    display: flex;
+    border-top: 1px solid #1e1e1e;
+    justify-content: space-between;
+    padding: 12px 20px;
+}
+
+.btn-back {
+    position: relative;
+    background: #e0e0e0;
+    color: #1e1e1e;
+    border: 1px solid #5b5b5b;
+    border-radius: 999px;
+    padding: 10px 52px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s, opacity 0.15s;
+}
+
+.btn-continue {
+    position: relative;
+    background: #e07820;
+    color: #fff;
+    border: none;
+    border-radius: 999px;
+    padding: 10px 52px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.15s, opacity 0.15s;
+}
+
+.btn-checkout:hover {
+    background: #c96a18;
+}
+
+.btn-checkout:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
