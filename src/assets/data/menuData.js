@@ -9,6 +9,13 @@ export const ADD_ONS = [
   { id: "sea_salt_cream",   label: "Sea Salt Cream",  price: 40 },
 ];
 
+export const DIPS = [
+  { id: "choco",          label: "Choco",           price: 0 },
+  { id: "caramel",        label: "Caramel",         price: 0 },
+  { id: "whip_cream",     label: "Whip Cream",      price: 15 },
+  { id: "sea_salt_cream", label: "Sea Salt Cream",  price: 15 },
+];
+
 // serveOptions: null = no choice, "hot_iced" = hot or iced toggle
 // icedUpcharge: extra charge for iced (if any)
 
@@ -23,8 +30,8 @@ export const MENU = [
       { id: "c01", name: "Amerikano",       price: 140, image: null },
       { id: "c02", name: "Latte",           price: 150, image: null },
       { id: "c03", name: "Spanish Latte",   price: 160, image: null },
-      { id: "c04", name: "Caramel Latte",   price: 160, image: null },
-      { id: "c05", name: "Hazelnut Latte",  price: 160, image: null },
+      { id: "c04", name: "Orea Latte",      price: 160, image: null },
+      { id: "c05", name: "Vietnamese",      price: 160, image: null },
       { id: "c06", name: "Mocha",           price: 160, image: null },
       { id: "c07", name: "White Mocha",     price: 165, image: null },
       { id: "c08", name: "Cappuccino",      price: 150, image: null },
@@ -88,27 +95,27 @@ export const MENU = [
     serveOptions: null,
     icedUpcharge: 0,
     items: [
-      { id: "p01", name: "Carbonara",              price: 180, image: null },
-      { id: "p02", name: "Aglio e Olio",           price: 175, image: null },
-      { id: "p03", name: "Pesto Pasta",            price: 185, image: null },
-      { id: "p04", name: "Arrabbiata",             price: 175, image: null },
+      { id: "p01", name: "Bacon Carbonara",              price: 220, image: null },
+      { id: "p02", name: "Tuna Creamy Pesto",           price: 220, image: null },
+      { id: "p03", name: "Italian Hungarian",            price: 220, image: null },
+      { id: "p04", name: "Truffle Pasta",             price: 250, image: null },
     ],
   },
 
   // ── RICE MEALS (7 items) ──────────────────────────────────────
   {
-    category: "Rice Meals",
+    category: "Rice Meal",
     section: "Meals",
     serveOptions: null,
     icedUpcharge: 0,
     items: [
-      { id: "r01", name: "Garlic Butter Chicken",  price: 180, image: null },
-      { id: "r02", name: "Teriyaki Chicken",       price: 185, image: null },
-      { id: "r03", name: "Honey Soy Pork",         price: 180, image: null },
-      { id: "r04", name: "Adobo Flakes",           price: 175, image: null },
-      { id: "r05", name: "Tapa",                   price: 180, image: null },
-      { id: "r06", name: "Longsilog",              price: 175, image: null },
-      { id: "r07", name: "Corned Beef Rice",       price: 175, image: null },
+      { id: "r01", name: "Hungarian Sausage",  price: 180, image: null },
+      { id: "r02", name: "Spam",       price: 180, image: null },
+      { id: "r03", name: "Bacon",         price: 180, image: null },
+      { id: "r04", name: "Corned Beef",           price: 180, image: null },
+      { id: "r05", name: "Tapa",                   price: 220, image: null },
+      { id: "r06", name: "Fried Chicken Chops",              price: 220, image: null },
+      { id: "r07", name: "Chicken Parmigiana",       price: 250, image: null },
     ],
   },
 
@@ -119,11 +126,11 @@ export const MENU = [
     serveOptions: null,
     icedUpcharge: 0,
     items: [
-      { id: "s01", name: "Waffle Fries",            price: 120, image: null },
-      { id: "s02", name: "Cheese Fries",            price: 140, image: null },
-      { id: "s03", name: "Nachos",                  price: 150, image: null },
-      { id: "s04", name: "Garlic Bread",            price: 100, image: null },
-      { id: "s05", name: "Onion Rings",             price: 120, image: null },
+      { id: "s01", name: "Churros",            price: 120, image: null },
+      { id: "s02", name: "Crisscut Fries",            price: 140, image: null },
+      { id: "s03", name: "Cajun Fries",                  price: 150, image: null },
+      { id: "s04", name: "Nuggets",            price: 100, image: null },
+      { id: "s05", name: "Nachos",             price: 120, image: null },
     ],
   },
 

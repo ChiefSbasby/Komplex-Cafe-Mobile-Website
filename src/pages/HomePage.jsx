@@ -22,7 +22,7 @@ const HomePage = () => {
       {/* ── Hero ── */}
       <section className="hero">
         <div className="hero_text">
-          <h1 className="hero_title">Komplex Cafe</h1>
+          <p className="hero_title">Komplex Cafe</p>
           <p className="hero_tagline">"...Where every cup tells a story."</p>
         </div>
       </section>

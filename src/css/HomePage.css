@@ -24,7 +24,7 @@
 
 .hero_title {
   color: #fff;
-  font-size: 52px;
+  font-size: 50px;
   font-weight: bold;
   text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
   font-family: "gliker", san-serif;
@@ -32,6 +32,7 @@
 
 .hero_tagline {
   color: #ddd;
+  padding-bottom: 30px;
   margin-top:30px;
   font-size: 15px;
   font-family: 'inter', sans-serif;
@@ -250,9 +251,13 @@
 }
 
 @media (max-width: 500px) {
+  .hero_title{
+    font-size: 35px !important;
+  }
   .hero_tagline {
     color: #ddd;
-    font-size: 15px;
+    padding-bottom: 10%;
+    font-size: 12px;
     font-family: 'inter', sans-serif;
     font-style: italic;
   }

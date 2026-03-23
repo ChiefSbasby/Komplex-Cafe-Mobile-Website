@@ -65,7 +65,7 @@ export default function CheckoutPage_2() {
                     Total: <strong>{peso(cartTotal)}</strong>
                 </div>
                 <div className="checkout-footer-buttons">
-                    <button className="btn-back" onClick={() => navigate("/menu")}>Back</button>
+                    <button className="btn-back" onClick={() => navigate("/menu", {state: {cart}})}>Back</button>
                     <button className="btn-continue" disabled={cart.length === 0} onClick={() => navigate("/checkout/extra")}>Continue</button>
                 </div>
             </div>
