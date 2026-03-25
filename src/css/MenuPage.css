@@ -11,7 +11,7 @@
   background: #f5f5f5;
   min-height: 100dvh;
   width: 100%;
-  max-width: 480px;
+  /* max-width: 480px; */
   margin: 0 auto;
   padding-top: 62px;
   display: flex;
@@ -43,7 +43,7 @@
   position: inherit;
   top: 154px;
   background: #fff;
-  width:100%;
+  width: 100%;
   border-bottom: 1px solid #ececec;
   overflow-x: auto;
   scrollbar-width: none;
@@ -168,8 +168,8 @@
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 100%;
-  max-width: 480px;
+  width: 550px;
+  max-width: 100%;
   background: #fff;
   border-top: 1px solid #e5e5e5;
   display: flex;

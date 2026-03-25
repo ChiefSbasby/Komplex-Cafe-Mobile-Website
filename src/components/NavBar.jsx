@@ -31,6 +31,8 @@ export default function NavBar() {
 
   return (
     <>
+    <section className="navigation">
+      
       {/* ── Hamburger ── */}
       <div className="nav_background">
         <button className="nav_hamburger" onClick={toggleMenu} aria-label="Toggle menu">
@@ -48,6 +50,7 @@ export default function NavBar() {
 
       {/* ── Dropdown ── */}
       {menuVisible && (
+      <div className="nav_clip">
         <div className={`dropdown ${closing ? "dropdown--closing" : ""}`}>
           {NAV_ROUTES.map(({ label, path }) => (
             <div key={label}>
@@ -87,7 +90,9 @@ export default function NavBar() {
             </div>
           ))}
         </div>
+      </div>
       )}
+    </section>
     </>
   );
 }

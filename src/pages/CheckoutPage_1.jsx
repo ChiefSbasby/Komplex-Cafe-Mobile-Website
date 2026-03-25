@@ -19,54 +19,31 @@ export default function CheckoutPage_2() {
     const cart = location.state?.cart ?? [];
     const cartTotal = cart.reduce((s, e) => s + e.lineTotal, 0);
 
-    /* ── Nav Bar ── */
-    const [menuOpen, setMenuOpen] = useState(false);
-    const [menuVisible, setMenuVisible] = useState(false);
-    const [closing, setClosing] = useState(false);
-
-
-    const openMenu = () => {
-        setMenuVisible(true);
-        setMenuOpen(true);
-        setClosing(false);
-    };
-
-    const closeMenu = () => {
-        setClosing(true);
-        setTimeout(() => {
-            setMenuOpen(false);
-            setMenuVisible(false);
-            setClosing(false);
-        }, 280); // match animation duration
-    };
-
-    const toggleMenu = () => {
-        if (menuOpen) closeMenu();
-        else openMenu();
-    };
 
     return (
-        <div className="checkout-page">
+        <div className="wrapper">
+            <div className="checkout-page">
 
-            <NavBar />
+                <NavBar />
 
-            {/* ── Hero banner ── */}
-            <div className="checkout-hero">
-                <h1 className="checkout-hero-title">Checkout</h1>
-            </div>
-
-            <p>hi ur in the FIRST checkout page</p>
-
-            {/* ── Cart items ── */}
-
-            {/* ── Sticky footer ── */}
-            <div className="checkout-footer">
-                <div className="checkout-footer-total">
-                    Total: <strong>{peso(cartTotal)}</strong>
+                {/* ── Hero banner ── */}
+                <div className="checkout-hero">
+                    <h1 className="checkout-hero-title">Checkout</h1>
                 </div>
-                <div className="checkout-footer-buttons">
-                    <button className="btn-back" onClick={() => navigate("/menu", {state: {cart}})}>Back</button>
-                    <button className="btn-continue" disabled={cart.length === 0} onClick={() => navigate("/checkout/extra")}>Continue</button>
+
+                <p>hi ur in the FIRST checkout page</p>
+
+                {/* ── Cart items ── */}
+
+                {/* ── Sticky footer ── */}
+                <div className="checkout-footer">
+                    <div className="checkout-footer-total">
+                        Total: <strong>{peso(cartTotal)}</strong>
+                    </div>
+                    <div className="checkout-footer-buttons">
+                        <button className="btn-back" onClick={() => navigate("/menu", {state: {cart}})}>Back</button>
+                        <button className="btn-continue" disabled={cart.length === 0} onClick={() => navigate("/checkout/extra")}>Continue</button>
+                    </div>
                 </div>
             </div>
         </div>

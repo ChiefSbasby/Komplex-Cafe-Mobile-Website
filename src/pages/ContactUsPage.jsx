@@ -1,18 +1,16 @@
-import { useState } from "react";
 import { MdOutlineMail } from "react-icons/md";
 import { FaFacebook } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import "../css/ContactUs.css";
 import NavBar from "../components/NavBar";
 
-import { useNavigate } from "react-router-dom";
 
 
 
 const ContactUs = () => {
     
     return (
-        <div className="wrapper">
+        <div className="wrapperContact">
 
             <NavBar/>
 

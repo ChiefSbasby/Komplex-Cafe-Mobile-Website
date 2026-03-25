@@ -1,9 +1,20 @@
 /* ---------- Navbar ---------- */
-.nav_background {
+/* .nav_background {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
+  background-color: white;
+  z-index: 998;
+} */
+
+.nav_background {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  /* max-width: 551px; */
   background-color: white;
   z-index: 998;
 }
@@ -18,12 +29,26 @@
   padding: 9px 10px;
 }
 
+/* ── Clipping wrapper — hides the drawer outside the 550px column ── */
+/* .nav_clip {
+  position: fixed;
+  top: 64px;     
+  left: 50%;
+  transform: translateX(-50%);
+  width: 550px;
+  max-width: 100%;
+  height: calc(100vh - 64px);
+  overflow: hidden;     
+  pointer-events:all;      
+  z-index: 501;
+} */
+
 /* ---------- Overlay ---------- */
 .dropdown-overlay {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
-  z-index: 18;
+  z-index: 500;
   animation: fadeIn 0.2s ease;
 }
 
@@ -44,15 +69,14 @@
 /* ---------- Dropdown Menu ---------- */
 .dropdown {
   position: fixed;
-  top: 0;
+  top: 64px;
   left: 0;
   width: 75%;
   max-width: 320px;
   height: 100vh;
   background-color: #fff;
-  z-index: 19;
+  z-index: 505;
   box-shadow: 4px 0 16px rgba(0, 0, 0, 0.15);
-  padding-top: 64px;
   animation: slideIn 0.3s ease forwards;
 }
 
@@ -133,11 +157,12 @@
   background-color: #f0f0f0;
 }
 
-/* ---------- Desktop ---------- */
-@media (min-width: 501px) {
-  .nav_background {
+@media (max-width: 500px){
+  .nav_background{
     max-width: 100%;
   }
+}
+@media (min-width: 501px) {
 
   .dropdown {
     width: 300px;

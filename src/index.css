@@ -6,12 +6,13 @@
   /* OPTIONAL: remove forced dark theme so your dashboard looks correct */
   color-scheme: light;
   color: #111;
-  background-color: #fff;
+  background-color: lightgray;
+  background-attachment: scroll;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale; 
 }
 
 html, body, #root {
@@ -24,8 +25,6 @@ html, body, #root {
 body {
   display: block;
   min-width: 320px;
-  min-height: 100vh;
-  background: #fff;
   color: #111;
 }
 
