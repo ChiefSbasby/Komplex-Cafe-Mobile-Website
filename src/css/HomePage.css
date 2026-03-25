@@ -265,8 +265,7 @@
   }
   .hero_tagline {
     color: #ddd;
-    padding-bottom: 10%;
-    line-height: 0;
+    line-height: 10px;
     font-size: 12px;
     font-family: 'inter', sans-serif;
     font-style: italic;
