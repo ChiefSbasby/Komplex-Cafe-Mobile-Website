@@ -1,0 +1,47 @@
+
+.wrapper{
+    background: #EF7828;
+    padding-top: 40px;
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.qr-page{
+    position:fixed;
+    background: white;
+    height: 80%;
+    width: 80%;
+    display: inherit;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: center;
+    font-family: 'Golos', sans-serif;
+}
+
+.qr-page img{
+    width: 200px;
+    height : 200px;
+}
+
+.qr-header{
+    font-weight: 600;
+}
+
+.qr-page p{
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.qr-page button{
+    font-weight: bold;
+    width: 275px;
+    height: 60px;
+    border-radius: 10px;
+    background-color: #EF7828;
+    margin-top: 10px;
+}
+
+@media (min-width: 501px){
+}

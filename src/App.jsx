@@ -1,3 +1,4 @@
+import React from "react";
 import { Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import MenuPage from "./pages/MenuPage";
@@ -6,6 +7,7 @@ import CheckoutPage_1 from "./pages/CheckoutPage_1.jsx";
 import CheckoutPage_2 from "./pages/CheckoutPage_2.jsx";
 import PaymentType from "./pages/PaymentType.jsx";
 import QRPage from "./pages/QRPage.jsx";
+import FirestoreTestPage from "./pages/FirestoreTestPage";
 
 export default function App() {
   return (
@@ -19,6 +21,7 @@ export default function App() {
       <Route path="/checkout/extra" element={<CheckoutPage_2 />} />
       <Route path="/paymenttype" element={<PaymentType />} />
       <Route path="/qrpage" element={<QRPage />} />
+      <Route path="/firestore-test" element={<FirestoreTestPage />} />
     </Routes>
     </>
   );
