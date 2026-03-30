@@ -188,6 +188,52 @@
     padding: 12px 20px;
 }
 
+.btn-dine-in {
+    background: #e0e0e0;
+    color: #1e1e1e;
+    border: 1px solid #5b5b5b;
+    border-radius: 999px;
+    padding: 5px 25px;
+    font-size: 15px;
+}
+
+.btn-take-out {
+    background: #e0e0e0;
+    color: #1e1e1e;
+    border: 1px solid #5b5b5b;
+    border-radius: 999px;
+    padding: 5px 25px;
+    font-size: 15px;
+}
+
+.receive-at-btns {
+    display: flex;
+}
+
+.btn-counter {
+    background: #e0e0e0;
+    color: #1e1e1e;
+    border: 1px solid #5b5b5b;
+    border-radius: 5px;
+    padding: 5px 25px;
+    font-size: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-table {
+    background: #e0e0e0;
+    color: #1e1e1e;
+    border: 1px solid #5b5b5b;
+    border-radius: 5px;
+    padding: 5px 35px;
+    font-size: 15px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
 .btn-back {
     background: #e0e0e0;
     color: #1e1e1e;
@@ -222,6 +268,24 @@
     border-radius: 8px;
     padding: 10px 12px;
 }
+
+
+.receive-at-label {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
+.spec-instruct-label {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+
 .order-type-label::after,
 .receive-at-label::after,
 .spec-instruct-label::after {

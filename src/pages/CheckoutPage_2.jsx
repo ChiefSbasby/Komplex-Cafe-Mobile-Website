@@ -46,41 +46,45 @@ export default function CheckoutPage_2() {
                     {/* Order Type */}
                     <section className="order-type">
                         <h2 className="order-type-label">Order Type</h2>
-                        <button
-                            type="button"
-                            className={`btn-dine-in${orderType === "dine_in" ? " btn--active" : ""}`}
-                            onClick={() => setOrderType("dine_in")}
-                        >
-                            Dine In
-                        </button>
-                        <button
-                            type="button"
-                            className={`btn-take-out${orderType === "take_out" ? " btn--active" : ""}`}
-                            onClick={() => setOrderType("take_out")}
-                        >
-                            Take Out
-                        </button>
+                        <div className="order-type-btns">
+                            <button
+                                type="button"
+                                className={`btn-dine-in${orderType === "dine_in" ? " btn--active" : ""}`}
+                                onClick={() => setOrderType("dine_in")}
+                            >
+                                Dine In
+                            </button>
+                            <button
+                                type="button"
+                                className={`btn-take-out${orderType === "take_out" ? " btn--active" : ""}`}
+                                onClick={() => setOrderType("take_out")}
+                            >
+                                Take Out
+                            </button>
+                        </div>
                     </section>
 
                     {/* Receive At */}
                     <section className="receive-at">
                         <h2 className="receive-at-label">Receive at</h2>
-                        <button
-                            type="button"
-                            className={`btn-counter${receiveAt === "counter" ? " btn--active" : ""}`}
-                            onClick={() => setReceiveAt("counter")}
-                        >
-                            <strong>Counter</strong>
-                            <FaCashRegister />
-                        </button>
-                        <button
-                            type="button"
-                            className={`btn-table${receiveAt === "table" ? " btn--active" : ""}`}
-                            onClick={() => setReceiveAt("table")}
-                        >
-                            <strong>Table</strong>
-                            <MdOutlineTableRestaurant />
-                        </button>
+                        <div className="receive-at-btns">
+                            <button
+                                type="button"
+                                className={`btn-counter${receiveAt === "counter" ? " btn--active" : ""}`}
+                                onClick={() => setReceiveAt("counter")}
+                            >
+                                <strong>Counter</strong>
+                                <FaCashRegister size={30}/>
+                            </button>
+                            <button
+                                type="button"
+                                className={`btn-table${receiveAt === "table" ? " btn--active" : ""}`}
+                                onClick={() => setReceiveAt("table")}
+                            >
+                                <strong>Table</strong>
+                                <MdOutlineTableRestaurant size={35}/>
+                            </button>
+                        </div>
                     </section>
 
                     {/* Special Instructions */}
