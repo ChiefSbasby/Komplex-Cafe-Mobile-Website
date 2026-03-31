@@ -1,6 +1,11 @@
 .paymenttype-page{
     background: white;
     height: 100vh;
+    width: 100%;
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 /* ─── Hero banner ───────────────────────────────────────────── */
@@ -17,7 +22,7 @@
 }
 
 .paymenttype-hero-title {
-    font-size: 3em;
+    font-size: 2.5em;
     color: #fff;
     letter-spacing: -0.5px;
 }
@@ -26,11 +31,11 @@
 
 .paymenttype-buttonlayout{
     display: grid;
-    padding-top: 200px;
+    padding-top: 170px;
     grid-template-rows: auto auto auto;
     justify-content:center;
-    vertical-align: middle;
-    row-gap: 20px;
+    align-content: center;
+    row-gap: 15px;
 }
 
 .paymenttype-buttonlayout button{
@@ -41,15 +46,16 @@
 }
 
 button img{
-    width: 150px;
-    height: 150px;
+    width: 130px;
+    height: 130px;
 }
 
 .btn-text{
     font-family: 'inter', sans-serif;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 30px;
     margin: 0 25px;
+    padding-top: 2px;
 }
 
 @media (min-width: 500px){

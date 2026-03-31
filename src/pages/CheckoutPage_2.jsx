@@ -49,14 +49,14 @@ export default function CheckoutPage_2() {
                         <div className="order-type-btns">
                             <button
                                 type="button"
-                                className={`btn-dine-in${orderType === "dine_in" ? " btn--active" : ""}`}
+                                className={`btn-dine-in${orderType === "dine_in" ? " btn-dine-in--active" : ""}`}
                                 onClick={() => setOrderType("dine_in")}
                             >
                                 Dine In
                             </button>
                             <button
                                 type="button"
-                                className={`btn-take-out${orderType === "take_out" ? " btn--active" : ""}`}
+                                className={`btn-take-out${orderType === "take_out" ? " btn-take-out--active" : ""}`}
                                 onClick={() => setOrderType("take_out")}
                             >
                                 Take Out
@@ -70,7 +70,7 @@ export default function CheckoutPage_2() {
                         <div className="receive-at-btns">
                             <button
                                 type="button"
-                                className={`btn-counter${receiveAt === "counter" ? " btn--active" : ""}`}
+                                className={`btn-counter${receiveAt === "counter" ? " btn-counter--active" : ""}`}
                                 onClick={() => setReceiveAt("counter")}
                             >
                                 <strong>Counter</strong>
@@ -78,11 +78,11 @@ export default function CheckoutPage_2() {
                             </button>
                             <button
                                 type="button"
-                                className={`btn-table${receiveAt === "table" ? " btn--active" : ""}`}
+                                className={`btn-table${receiveAt === "table" ? " btn-table--active" : ""}`}
                                 onClick={() => setReceiveAt("table")}
                             >
                                 <strong>Table</strong>
-                                <MdOutlineTableRestaurant size={35}/>
+                                <MdOutlineTableRestaurant size={40}/>
                             </button>
                         </div>
                     </section>
@@ -92,14 +92,17 @@ export default function CheckoutPage_2() {
                         <label className="spec-instruct-label" htmlFor="spec-instruct-text">
                             <h2>Special Instructions</h2>
                         </label>
-                        <textarea
-                            id="spec-instruct-text"
-                            name="spec-instruct-text"
-                            rows="7"
-                            placeholder="Example: no salt, no cutlery, etc."
-                            value={instructions}
-                            onChange={(e) => setInstructions(e.target.value)}
-                        />
+                        <div className="spec-instruct-textarea">
+                            <textarea className="spec-instruct-text"
+                                id="spec-instruct-text"
+                                name="spec-instruct-text"
+                                rows="8"
+                                placeholder="Example: no salt, no cutlery, etc. (350 characters only)"
+                                maxLength={350}
+                                value={instructions}
+                                onChange={(e) => setInstructions(e.target.value)}
+                            />
+                        </div>
                     </section>
 
                 </div>

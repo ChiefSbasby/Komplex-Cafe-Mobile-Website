@@ -1,4 +1,3 @@
-
 import { Navigate, useNavigate } from "react-router-dom";
 import "../css/PaymentTypePage.css";
 import NavBar from "../components/NavBar";
