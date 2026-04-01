@@ -1,13 +1,11 @@
-
 .qr-wrapper {
-  font-family: 'Golos', sans-serif;
-  width: 100%;
-  left: 50%;
-  margin: 0 auto;
-  background-color: #EF7828;
-  min-height: 100vh;
-  overflow-x: hidden;
-  padding-top: 110px;
+    flex: 1;
+    font-family: 'Golos', sans-serif;
+    width: 100%;
+    background-color: #EF7828;
+    min-height: 100vh;
+    overflow-x: hidden;
+    padding-top: 110px;
 }
 
 .qr-page {
@@ -23,24 +21,24 @@
     font-family: 'Golos', sans-serif;
 }
 
-.qr-page img{
+.qr-page img {
     width: 200px;
-    height : 200px;
+    height: 200px;
 }
 
-.qr-header{
+.qr-header {
     font-size: 2em;
     font-weight: 600;
     padding-bottom: 5px;
 }
 
-.qr-page p{
+.qr-page p {
     font-size: 1.1em;
     font-weight: 600;
     padding: 5px 10px 25px 10px;
 }
 
-.qr-page button{
+.qr-page button {
     font-weight: bold;
     width: 250px;
     height: 60px;
@@ -56,4 +54,3 @@
     justify-content: center;
     gap: 10px;
 }
-

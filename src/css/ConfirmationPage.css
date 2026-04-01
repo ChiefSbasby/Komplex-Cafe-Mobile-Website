@@ -21,20 +21,26 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 32px 24px;
+    background-color: #EF7828;
 }
  
 /* ─── White card ────────────────────────────────────────────── */
 .confirmation-white {
     background: #fff;
-    border-radius: 16px;
-    height: 75vh;
-    max-width: 360px;
-    padding: 35px 30px 30px;
+    height: 80vh;
+    width: 85%;
+    padding: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    gap: 0;
+    align-content: center;
+    justify-content: center;
+}
+
+/* ─── Border ──────────────────────────────────────────────── */
+.confirmation-border {
+    padding: 140px 20px;
+    border: 2px solid #111;
+    border-radius: 15px;
 }
  
 /* ─── Header text ───────────────────────────────────────────── */
@@ -45,6 +51,13 @@
     text-align: center;
     line-height: 1.25;
     margin-bottom: 24px;
+}
+
+/* ─── Coffee Icon ───────────────────────────────────────────── */
+.coffee-icon {
+    display: flex;
+    align-content: center;
+    justify-content: center;
 }
  
 /* ─── Reference number box ──────────────────────────────────── */
@@ -59,13 +72,6 @@
     text-align: center;
     letter-spacing: 1px;
     margin-bottom: 20px;
-}
-
-/* ─── Border ──────────────────────────────────────────────── */
-.confirmation-border {
-    padding: 45px 20px;
-    border: 2px solid #111;
-    border-radius: 15px;
 }
  
 /* ─── Subtitle ──────────────────────────────────────────────── */
