@@ -14,6 +14,9 @@ for routing and navigation
 `npm install react-icons`
 for react icons to display properly in the website
 
+`npm install firebase`
+to implement firebase
+
 
 ## How to run
 Use the command in the terminal:
