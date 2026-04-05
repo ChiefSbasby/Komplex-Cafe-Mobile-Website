@@ -115,7 +115,7 @@ export default function PaymentType() {
       });
 
       /* 7. Navigation */
-      const targetPath = paymentType === 1 ? "/qrpage" : "/order-confirmed";
+      const targetPath = paymentType === 1 ? "/qrpage" : "/confirmation";
       navigate(targetPath, {
         state: { orderId: newOrderId, paymentId: newPaymentId },
       });

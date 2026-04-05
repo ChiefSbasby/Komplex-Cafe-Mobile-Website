@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "../firebase.js";
-import { useNavigate, useSearchParams } from "react-router-dom";
+import { useNavigate, useSearchParams, useLocation } from "react-router-dom";
 import NavBar from "../components/NavBar";
 import "../css/MenuPage.css";
 
