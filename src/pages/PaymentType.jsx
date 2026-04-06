@@ -4,6 +4,7 @@ import {
   doc,
   runTransaction,
   serverTimestamp,
+  arrayUnion,
 } from "firebase/firestore";
 import { db } from "../firebase.js";
 import "../css/PaymentTypePage.css";
@@ -36,24 +37,22 @@ export default function PaymentType() {
 
   /* ── Core Firestore write (shared by both payment types) ── */
   const submitOrder = async (paymentType, receiptUrl = "") => {
-    const existingGuestId  = getSessionGuestId();
-    const isNewGuest       = existingGuestId === null;
+    const existingGuestId = getSessionGuestId();
+    const isNewGuest      = existingGuestId === null;
 
     const orderCounterRef   = doc(db, "counters", "order_id");
     const paymentCounterRef = doc(db, "counters", "payment_id");
-    const guestCounterRef   = doc(db, "counters", "guest_counter");
+    const guestCounterRef   = doc(db, "counters", "guest_id");
 
     let newOrderId, newPaymentId, guestId;
 
     await runTransaction(db, async (transaction) => {
       /* 1. Read counters — include guest counter only for new guests */
-      const reads = [
+      const [orderSnap, paymentSnap, guestCounterSnap] = await Promise.all([
         transaction.get(orderCounterRef),
         transaction.get(paymentCounterRef),
         isNewGuest ? transaction.get(guestCounterRef) : Promise.resolve(null),
-      ];
-
-      const [orderSnap, paymentSnap, guestCounterSnap] = await Promise.all(reads);
+      ]);
 
       /* 2. Calculate IDs */
       newOrderId   = (orderSnap.data()?.current_value   ?? 0) + 1;
@@ -62,11 +61,13 @@ export default function PaymentType() {
         ? (guestCounterSnap.data()?.current_value ?? 0) + 1
         : existingGuestId;
 
-      /* 3. Update counters */
-      transaction.update(orderCounterRef,   { current_value: newOrderId   });
-      transaction.update(paymentCounterRef, { current_value: newPaymentId });
+      /* 3. Update counters
+            Use set+merge so the transaction succeeds even if the counter
+            document doesn't exist yet (avoids "Can't update non-existent doc") */
+      transaction.set(orderCounterRef,   { current_value: newOrderId   }, { merge: true });
+      transaction.set(paymentCounterRef, { current_value: newPaymentId }, { merge: true });
       if (isNewGuest) {
-        transaction.update(guestCounterRef, { last_guest_id: guestId });
+        transaction.set(guestCounterRef, { current_value: guestId }, { merge: true });
       }
 
       /* 4. Write tbl_orders */
@@ -82,21 +83,27 @@ export default function PaymentType() {
         })),
         total_amount:  totalAmount,
         order_status:  paymentType === 1 ? "PROCESSING PAYMENT" : "PENDING",
-        order_type:    orderType    ?? null,
-        receive_at:    receiveAt    ?? null,
+        order_type:    orderType ?? null,
+        receive_at:    receiveAt ?? null,
         special_instructions:  instructions || null,
         table_id:      null,
         receipt_image: receiptUrl,
         o_timestamp:   serverTimestamp(),
       });
 
-      /* 5. Write tbl_guests only for new guests */
+      /* 5. Write or update tbl_guests
+            New guest  → create doc with order_ids as a 1-item array
+            Returning  → append new order_id to existing order_ids array */
+      const guestRef = doc(db, "tbl_guests", String(guestId));
       if (isNewGuest) {
-        const guestRef = doc(db, "tbl_guests", String(guestId));
         transaction.set(guestRef, {
           guest_id:     guestId,
-          order_id:     newOrderId,
+          order_ids:    [newOrderId],
           date_ordered: serverTimestamp(),
+        });
+      } else {
+        transaction.update(guestRef, {
+          order_ids: arrayUnion(newOrderId),
         });
       }
 

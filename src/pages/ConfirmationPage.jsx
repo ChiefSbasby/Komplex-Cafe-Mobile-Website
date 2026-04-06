@@ -11,27 +11,27 @@ const STATUS_CONFIG = {
   "PENDING": {
     icon:    <FaClock size={50} />,
     header:  "Your order has been placed!",
-    sub:     "We're waiting to confirm your order.",
+    sub:     "We're waiting to confirm your order. Do not leave or close this page.",
   },
   "PROCESSING PAYMENT": {
     icon:    <FaSpinner size={50} className="spin" />,
     header:  "Processing your payment…",
-    sub:     "Please wait while we verify your payment.",
+    sub:     "Please wait while we verify your payment. Do not leave or close this page.",
   },
   "PREPARING": {
     icon:    <FaCoffee size={50} />,
     header:  "Your order is being prepared!",
-    sub:     "Our team is working on your order.",
+    sub:     "Our team is working on your order. Do not leave or close this page.",
   },
   "AWAITING PICK-UP": {
     icon:    <FaBell size={50} />,
     header:  "Your order is ready!",
-    sub:     "Please proceed to the counter to pick up your order.",
+    sub:     "Please proceed to the counter to pick up your order. You are free to close this page.",
   },
   "COMPLETED": {
     icon:    <FaCheckCircle size={50} />,
     header:  "Order completed!",
-    sub:     "Thank you for your order. Enjoy!",
+    sub:     "Thank you for your order. You are free to close this page. Enjoy!",
   },
   "CANCELLED": {
     icon:    <FaTimesCircle size={50} />,
